@@ -6,6 +6,7 @@ body{
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -32,6 +33,10 @@ a:hover{
 .discount-box {
   width: auto;
   height: 50px;
+}
+
+.giftIcon{
+  width: 30px;
 }
 
 .discount-box .rectangle {
@@ -91,6 +96,7 @@ a:hover{
 
 .select-dropdown,
 .select-dropdown * {
+  color: black;
   margin: 0;
   padding: 0;
   position: relative;
@@ -173,6 +179,7 @@ a:hover{
   align-items: center;
   justify-content: space-between;
   padding-inline: 1.5rem;
+  
 }
 
 .image {
@@ -189,6 +196,15 @@ a:hover{
   object-fit: cover;
 }
 
+.MenuButton{
+  display: none;
+}
+
+.right-nav{
+  display: flex;
+  align-items: space-between;
+}
+
 .menu-items{
   display: flex;
   justify-content: center;
@@ -197,6 +213,7 @@ a:hover{
 
 .menu-items p{
   padding: 0.8rem;
+
 }
 
 
@@ -233,7 +250,7 @@ a:hover{
 
 .banner-box {
   width: 100vw;
-  height: 85vh;
+  height: 100vh;
   background-image: url("assets/img/banner.png");
   display: flex;
   align-items: center;
@@ -241,6 +258,9 @@ a:hover{
   background-repeat: no-repeat;
   color: white;
   background-size: 100% 100%;
+  background-size: cover;
+  
+  
 }
 
 .banner-text{
@@ -255,6 +275,8 @@ a:hover{
   font-weight: 600;
 }
 
+.break-banner-title{display: none;}
+
 .banner-description{
   font-size: 1.2rem;
   font-weight: 700;
@@ -266,6 +288,7 @@ a:hover{
   padding: 0.5rem 2rem 0.5rem 2rem;
   border-radius: 1.5rem;
   background-color: white;
+  font-weight: 700;
 }
 
 .banner-button:hover{
@@ -275,32 +298,33 @@ a:hover{
   padding: 0.5rem 2rem 0.5rem 2rem;
   border-radius: 1.5rem;
   background-color: #01aac9;
+  color: black;
 }
 
 
 /************************************ Featured Categories ************************************/
 
 .featured-categories{
-  height: 80vh;  
+  height: 90vh; 
 }
 
 .featured-categories-title{
   font-size: 2.5rem;
   font-weight: 700;
-  padding-inline: 3rem;
+  padding-inline: 1rem;
+  margin-bottom: 10px;
 }
 
 .featured-categories-body{
   display: flex;
   justify-content: space-around;
+  margin-top: 0;
+  padding: 1rem;
 }
 
 .featured-card{
   margin: 1rem;
-  width: 20%;
   border-radius: 1rem; 
-  display: flex;
-  flex-direction: column;
   border: 1px solid gray;
 }
 
@@ -348,11 +372,12 @@ a:hover{
 
 .popular{
   width: 100%;
-  height: 95vh;
+  min-height: 110vh;
   background-repeat: no-repeat;
   color: white;
   background-size: 100% 100%;
   background-image: url('assets/img/Popular.png');
+  background-size: cover;
 }
 
 .inner-popular-box{
@@ -363,7 +388,7 @@ a:hover{
   color: black;
   font-size: 2.5rem;
   font-weight: 700;
-  padding-inline: 3rem;
+  padding-inline: 1rem;
 }
 
 .popular-categories-body{
@@ -375,7 +400,7 @@ a:hover{
 .popular-card{
   position: relative;
   margin: 1rem;
-  width: 20%;
+  width: 25%;
   height: 55vh;
   border-radius: 1rem; 
   display: flex;
@@ -473,11 +498,15 @@ a:hover{
   width: 100%;
 }
 
+.advantages-phone{
+  display: none;
+}
+
 .advantages-title{
   color: black;
   font-size: 2.5rem;
   font-weight: 700;
-  padding-inline: 3rem;
+  padding-inline: 1rem;
 }
 
 .our-advantage{
@@ -500,6 +529,10 @@ a:hover{
   align-items: center;
   color: white;
   
+}
+
+.our-advantage-phone{
+  display: none;
 }
 
 .over-img img{
@@ -545,26 +578,24 @@ a:hover{
 
 .latest-news{
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 
 .latest-news-title{
   color: black;
   font-size: 2.5rem;
   font-weight: 700;
-  padding-inline: 3rem;
+  padding-inline: 1rem;
 }
 
 .latest-news-body{
   display: flex;
   justify-content: space-around;
-  justify-content: center;
   align-items: center;
 }
 
 .latest-news-card{
   margin: 1rem;
-  width: 20%;
   border-radius: 1rem; 
   display: flex;
   flex-direction: column;
@@ -618,10 +649,11 @@ a:hover{
 
 
 .instagram{
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   background-image: url('./assets/img/insta.svg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 
@@ -629,7 +661,7 @@ a:hover{
   color: black;
   font-size: 2.5rem;
   font-weight: 700;
-  padding-inline: 3rem;
+  padding-inline: 1rem;
 }
 
 .insta-box-body{
@@ -692,7 +724,7 @@ a:hover{
 
 }
 
-.input-button{
+.newsletter{
   display: flex;
   align-items: center;
 }
@@ -725,5 +757,10 @@ a:hover{
   display: flex;
   justify-content: space-between;
   width: 150px;
+}
+
+
+.pp-phone{
+  display: none;
 }
 

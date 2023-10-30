@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Globber.com</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="phone.css" />
+    <script src="main.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </head>
   <body>
@@ -17,7 +19,7 @@
               <img
                 src="assets/icons/GIft_fill.svg"
                 alt="Gift_fill"
-                width="30px"
+                class="giftIcon"
               />&nbsp;30% discount on XY
             </p>
           </div>
@@ -63,41 +65,56 @@
 
       <!------------------------------------- NavBar ------------------------------------->
       <div class="nav">
-        <div class="image">
-          <img class="img" src="assets/logo.png" />
+        <div class="left-nav">
+          <div class="image">
+            <img class="img" src="assets/logo.png" />
+          </div>
+          <button onclick="MenuBarClick()" class="MenuButton">
+            <box-icon
+              name="menu-alt-right"
+              class="menu-bar"
+              color="#aaa"
+            ></box-icon>
+          </button>
         </div>
-        <div class="menu-items">
-          <a class="menu-top" href="#"><p>Toddlers</p></a>
-          <a class="menu-top" href="#"><p>Kids</p></a>
-          <a class="menu-top" href="#"><p>Teens</p></a>
-          <a class="menu-top" href="#"><p>Adults</p></a>
-          <a class="menu-top" href="#"><p>Shop By Product</p></a>
-          <a class="menu-top" href="#"><p>About Us</p></a>
-          <a class="menu-top" href="#"><p>Find Your Ride Quiz</p></a>
-        </div>
-        <div class="menu-icons">
-          <input type="text" placeholder="Search" class="search-box" />
-          <a href="#"
-            ><img src="assets/icons/Bag_alt_fill.svg" alt="Bag_alt_fill"
-          /></a>
-          <a href="#"
-            ><img
-              src="assets/icons/web_comparison-picto_5d 1.svg"
-              alt="web_comparison-picto_5d"
-          /></a>
-          <a href="#"
-            ><img src="assets/icons/Favorite_fill.svg" alt="Favorite_fill"
-          /></a>
-          <a href="#"
-            ><img src="assets/icons/User_fill.svg" alt="User_fill"
-          /></a>
+        <div class="right-nav">
+          <div class="menu-items">
+            <a class="menu-top" href="#"><p>Toddlers</p></a>
+            <a class="menu-top" onclick="MenuTop()" href="#"><p>Kids</p></a>
+            <a class="menu-top" href="#"><p>Teens</p></a>
+            <a class="menu-top" href="#"><p>Adults</p></a>
+            <a class="menu-top" href="#"><p>Shop By Product</p></a>
+            <a class="menu-top" href="#"><p>About Us</p></a>
+            <a class="menu-top" href="#"><p>Find Your Ride Quiz</p></a>
+          </div>
+          <div class="menu-icons">
+            <input type="text" placeholder="Search" class="search-box" />
+            <div>
+              <a href="#"
+                ><img src="assets/icons/Bag_alt_fill.svg" alt="Bag_alt_fill"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/icons/web_comparison-picto_5d 1.svg"
+                  alt="web_comparison-picto_5d"
+              /></a>
+              <a href="#"
+                ><img src="assets/icons/Favorite_fill.svg" alt="Favorite_fill"
+              /></a>
+              <a href="#"
+                ><img src="assets/icons/User_fill.svg" alt="User_fill"
+              /></a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!------------------------------------- Banner-box ------------------------------------->
       <div class="banner-box">
         <div class="banner-text">
-          <div class="banner-title">JUNIOR SERIES</div>
+          <div class="banner-title">
+            JUNIOR <br class="break-banner-title" />SERIES
+          </div>
           <br />
           <div class="banner-description">
             Designed for big plays by toddlers! <br />A 3-wheel scooter for
@@ -393,6 +410,48 @@
         <img src="/assets/img/Advantages.png" alt="" />
       </div>
 
+      <div class="advantages-phone">
+        <div class="advantages-title">Our advantages</div>
+        <div class="advantages-phone-body">
+          <div class="advantages-phone-card">
+            <img src="/assets/img/quality.png" alt="" />
+            <p class="advantages-phone-label">
+              Quality <br />
+              Obsessed
+            </p>
+          </div>
+          <div class="advantages-phone-card">
+            <img src="/assets/img/checkList.png" alt="" />
+            <p class="advantages-phone-label">
+              2-Year <br />
+              Warranty
+            </p>
+          </div>
+
+          <div class="advantages-phone-card">
+            <img src="/assets/img/support.svg" alt="" />
+            <p class="advantages-phone-label">
+              24/7 <br />
+              support
+            </p>
+          </div>
+          <div class="advantages-phone-card">
+            <img src="/assets/img/shipping.png" class="shipping-img" alt="" />
+            <p class="advantages-phone-label">
+              Free <br />
+              Shipping!
+            </p>
+          </div>
+          <div class="advantages-phone-card">
+            <img src="/assets/img/dollar.png" alt="" />
+            <p class="advantages-phone-label">
+              100% <br />
+              Money Back
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div class="our-advantage">
         <div class="advantage-img">
           <img src="./assets/img/marketing_banner.png" alt="" />
@@ -408,6 +467,15 @@
             <button class="marketing-btn">Call to Action</button>
           </div>
         </div>
+      </div>
+
+      <div class="our-advantage-phone">
+        <p class="our-advantage-phone-title">Marketing Banner</p>
+        <p class="our-advantage-phone-dec">
+          Designed for big plays by toddlers! <br />
+          A 3-wheel scooter for toddlers ages.
+        </p>
+        <button class="marketing-btn">Call to Action</button>
       </div>
 
       <!------------------------------------- Latest News ------------------------------------->
@@ -523,12 +591,16 @@
           <div class="footer-para">
             <p>Subscribe to our newsletter with your email</p>
           </div>
-          <div class="input-button">
-            <div class="input">
-              <input type="text" class="call-to-action" />
+          <div class="newsletter">
+            <div class="NewsLetterInput">
+              <input
+                type="text"
+                placeholder="Enter Your Email"
+                class="call-to-action"
+              />
             </div>
             <div class="button">
-              <a href="#">Call to Action</a>
+              <a href="#">Subscribe</a>
             </div>
           </div>
         </div>
@@ -544,6 +616,10 @@
           <a href="#"><img src="/assets/img/youtube.svg" alt="youtube" /></a>
           <a href="#"><img src="/assets/img/instagram.svg" alt="insta" /></a>
           <a href="#"><img src="/assets/img/facebook.svg" alt="facebook" /></a>
+        </div>
+
+        <div class="pp-phone">
+          <p>Privacy Policy</p>
         </div>
         <div class="Terms">
           <p>Terms and Conditions</p>
