@@ -464,8 +464,19 @@
         align-items: initial;
         height: 90px;
         justify-content: space-between;
+        min-width: 80vw;
+
         
     }
+
+    .footer-para{
+        display: flex;
+        justify-content: center;
+        min-width: 80vw;
+    }
+
+   
+    
     
     .call-to-action{
         width: 100%;
